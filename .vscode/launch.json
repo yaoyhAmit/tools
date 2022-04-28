@@ -1,0 +1,979 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "checkMask",
+            "type": "python",
+            "request": "launch",
+            "program": "checkMask.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/mp42file",
+            "args" :[
+            ]
+
+        },
+        {
+            "name": "masking",
+            "type": "python",
+            "request": "launch",
+            "program": "masking.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/mp42file",
+            "args" :[
+            ]
+
+        },
+        {
+            "name": "iou",
+            "type": "python",
+            "request": "launch",
+            "program": "iou.py",
+            "console": "integratedTerminal",
+            "args" :[
+                "--pred=/home/yao/workspace/yolact/data/outputimg/",
+                "--true=/home/yao/workspace/yolact/data/json/",
+                // "--pred=/home/yao/workspace/tools/tmp/",
+                // "--true=/home/yao/workspace/tools/tmp1/",
+                // "--eqn=10"
+                "--w=735",
+                "--h=530"
+            ]
+
+        },
+        {
+            "name": "file2mp4",
+            "type": "python",
+            "request": "launch",
+            "program": "file2mp4.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/file2mp4",
+            "args" :[
+                // "--Prefix=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/patient10010/inference_res/img10010-v011",
+                // "--Prefix=/mnt/iot-hd/workspace/trainingdata-us-second/liver/patient90002/patient90002/inference_res/vid90002-004/vid90002-004",
+                "--Prefix=/home/yao/workspace/trainingdata-us/LiveModel/LiveModel/images/2021-12-22-114242",
+                "--To=3876",
+                "--FPS=30"
+                // "--INJPath=/media/yao/iot-hd/workspace/pytorch-flask-api/UNET3PLUS/data/out/",
+                // "--OUTJPath=/media/yao/iot-hd/workspace/pytorch-flask-api/UNET3PLUS/data/out/"
+            ]
+
+        },
+        {
+            "name": "test",
+            "type": "python",
+            "request": "launch",
+            "program": "test.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+            // ,
+            // "args" :[
+            //     "--Prefix=/home/yao/workspace/yolact/data/outputimg/patient1-24",
+            //     "--To=299",
+            //     "--Postfix=_class_2"
+            // ]
+
+        },
+        {
+            "name": "mp42file",
+            "type": "python",
+            "request": "launch",
+            "program": "mp42file.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/mp42file"
+            // "args" :[
+            //     "--Prefix=/home/yao/workspace/yolact/data/outputimg/patient1-24",
+            //     "--To=299",
+            //     "--Postfix=_class_2"
+            // ]
+
+        },
+        {
+            "name": "equalizeHist",
+            "type": "python",
+            "request": "launch",
+            "program": "equalizeHist.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args" :[
+                "--i=/home/yao/workspace/testdata/JJG_original_wennan_change_20200912_ALL/image/",
+                "--o=/home/yao/workspace/yolact/data/inputimg/"
+                // ,
+                // "--isShow=False"
+            ]
+        },
+        {
+            "name": "iou-cuda",
+            "type": "python",
+            "request": "launch",
+            "program": "iou-cuda.py",
+            "console": "integratedTerminal",
+            "args" :[
+                "--pred=/home/yao/workspace/yolact/data/outputimg/",
+                "--true=/home/yao/workspace/yolact/data/json/",
+                // "--pred=/home/yao/workspace/tools/tmp/",
+                // "--true=/home/yao/workspace/tools/tmp1/",
+                // "--eqn=10"
+                "--w=735",
+                "--h=530"
+            ]
+
+        },
+        {
+            "name": "toLbmJson",
+            "type": "python",
+            "request": "launch",
+            "program": "toLbmJson.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/labelme",
+            "args" :[
+                // "--imagePath=./",
+                // "--SJsonPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/patient10010/",
+                // "--DJsonPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/patient10010/labelme/",
+                // "--distance=15",
+                "--imagePath=./",
+                "--SJsonPath=/mnt/iot-hd/workspace/01.Beijing/03.XZP/all/",
+                "--DJsonPath=/mnt/iot-hd/workspace/01.Beijing/03.XZP/jsons/",
+                "--distance=0",
+                // "--imageWidth=1024",
+                // "--imageHeight=768"
+            ]
+
+        },
+        {
+            "name": "fromLbmJson",
+            "type": "python",
+            "request": "launch",
+            "program": "fromLbmJson.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/labelme",
+            "args" :[
+                "--SJsonPath=/home/yao/workspace/education-contents/SJG/labelme/patient3156-05/",
+                "--DJsonPath=/home/yao/workspace/education-contents/SJG/patient3156-05_image_json/"
+            ]
+
+        },
+        {
+            "name": "transform_image_from_JJG",
+            "type": "python",
+            "request": "launch",
+            "program": "transform_image_from_JJG.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args" :[
+                "--inPath=/home/yao/workspace/education-contents/SJG/patient3156-05_image_json/",
+                "--outPath=/home/yao/workspace/education-contents/SJG/transform_output/patient3156-05/"
+            ]
+
+        },
+        {
+            "name": "renameJV",
+            "type": "python",
+            "request": "launch",
+            "program": "renameJV.py",
+            "console": "integratedTerminal",
+            "args" :[
+                "--SJsonPath=/home/yao/workspace/education-contents/test-contents/data/patient001/"
+            ]
+
+        },
+        {
+            "name": "mp42file2",
+            "type": "python",
+            "request": "launch",
+            "program": "mp42file2.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                "--VideoFile=${workspaceFolder}/mp42file/us.mp4",
+                "--OUTJPath=${workspaceFolder}/mp42file/us",
+                "--Indexs=2 30 18 3 4"
+            ]
+        },
+        {
+            "name": "cutImage",
+            "type": "python",
+            "request": "launch",
+            "program": "cutImage.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/subJsons/",
+
+                // "--inImgPath=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/images/",
+                // "--outImgPath=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/subImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/jsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/subJsons/",
+                // "--needResize=True"
+
+                // "--inImgPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images1024/depth2.5/",
+                // "--outImgPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/subImages1024/depth2.5/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images1024/depth2.5/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/subImages1024/depth2.5/",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/20220115185506_images/back/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/20220115185506_images/back/sub-images/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/20220115185506_images/back/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/20220115185506_images/back/sub-jsons/",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/2.5/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/2.5/subImages/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/2.5/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/2.5/subJsons",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3/subImages/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3/subJsons",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3.5/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3.5/subImages/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3.5/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/3.5/subJsons",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4/subImages/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4/subJsons",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4.5/images/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4.5/subImages/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4.5/jsons/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/Qualified_JJG_Beijing/4.5/subJsons",
+                // "--needScaling=True"
+
+                // "--inImgPath=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/images-origin/",
+                // "--outImgPath=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/images/",
+                // "--inJsonPath=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/jsons-origin/",
+                // "--outJsonPath=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/jsons",
+                // "--needScaling=True"
+                "--inImgPath=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/OriginImages/",
+                "--outImgPath=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/images/",
+                "--inJsonPath=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/OriginJsons/",
+                "--outJsonPath=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/jsons",
+                "--needScaling=False"
+            ]
+        },
+        {
+            "name": "png2nii",
+            "type": "python",
+            "request": "launch",
+            "program": "png2nii.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/DICOM",
+            "args" :[
+                // "--inImgPath=/media/yao/iot-hd/workspace/trainingdata-us/TEST4-20210518-01/images_origin",
+                // "--outImgPath=/media/yao/iot-hd/workspace/trainingdata-us/TEST4-20210518-01/images",
+                // "--needResize=True"
+            ]
+        },
+        {
+            "name": "computingImgDiff",
+            "type": "python",
+            "request": "launch",
+            "program": "computingImgDiff.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                "--Prefix=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M2/usImages/20210527200829-m2",
+                "--OutCSV=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M2/sameFrames.csv",
+                "--Threshold=0.99",
+                "--From=1",
+                "--To=3030"
+                // "--From=2095",
+                // "--To=2096"
+            ]
+        },        
+        {
+            "name": "PositionInterpolation",
+            "type": "python",
+            "request": "launch",
+            "program": "PositionInterpolation.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/DICOM",
+            "args" :[
+                // "--inCSV=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M2/20210527200829.csv",
+                // "--inUSTS=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M2/20210527200829.mp4.csv",
+                // "--outCSV=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M2/track.csv"
+
+                // "--inCSV=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M1/20210527200147.csv",
+                // "--inUSTS=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M1/20210527200147.mp4.csv",
+                // "--outCSV=/media/yao/iot-hd/workspace/trainingdata-us/TEST20210527/M形/M1/track.csv"
+                
+                "--inCSV=/media/yao/iot-hd/workspace/trainingdata-us/腹部超声视频0611/20210611200341.csv",
+                "--inUSTS=/media/yao/iot-hd/workspace/trainingdata-us/腹部超声视频0611/20210611200341-us.csv",
+                "--outCSV=/media/yao/iot-hd/workspace/trainingdata-us/腹部超声视频0611/track.csv"
+            ]
+        },
+        {
+            "name": "transformation",
+            "type": "python",
+            "request": "launch",
+            "program": "transformation.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/3DTrack",
+            "args" :[
+                "--json_in=/home/yao/workspace/trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/20220124220645.json",
+                "--json_out=/home/yao/workspace/trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/20220124220645_transformated.json"
+            ]
+        },
+        {
+            "name": "3DTrack",
+            "type": "python",
+            "request": "launch",
+            "program": "track.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/3DTrack",
+            "args" :[
+                // "--csv_in=./Data/20210317-01/20210317173201.csv",
+                // "--json_in=./Data/20210317-01/us-",
+                // "--csv_us_out=./outputcsv/us-01-01.csv",
+                // "--csv_points_out=./outputcsv/points-01-01.csv",
+                // // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210317-01-001.json"
+
+                // "--csv_in=./Data/20210317-02/20210317174023.csv",
+                // "--json_in=./Data/20210317-02/us-",
+                // "--csv_us_out=./outputcsv/us-01-02.csv",
+                // "--csv_points_out=./outputcsv/points-01-02.csv",
+                // // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210317-01-002.json"
+
+                // "--csv_in=./Data/20210317-03/20210317174058.csv",
+                // "--json_in=./Data/20210317-03/us-",
+                // "--csv_us_out=./outputcsv/us-01-03.csv",
+                // "--csv_points_out=./outputcsv/points-01-03.csv",
+                // // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210317-01-003.json"
+
+                // "--csv_in=./Data/20210317-04/20210317174139.csv",
+                // "--json_in=./Data/20210317-04/us-",
+                // "--csv_us_out=./outputcsv/us-01-04.csv",
+                // "--csv_points_out=./outputcsv/points-01-04.csv",
+                // // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210317-01-004.json"
+
+                // "--csv_in=../../trainingdata-us/20210330-01/202103301737.csv",
+                // "--json_in=../../trainingdata-us/20210330-01/20210330-001-",
+                // "--csv_us_out=./outputcsv/us-20210330-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210330-001.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210330-001.json"
+
+                // "--csv_in=../../trainingdata-us/20210330-02/202103301739.csv",
+                // "--json_in=../../trainingdata-us/20210330-02/20210330-002-",
+                // "--csv_us_out=./outputcsv/us-20210330-002.csv",
+                // // "--needBorder=True",
+                // "--csv_points_out=./outputcsv/points-20210330-002.csv",
+                // "--outJson=./outputJson/points-20210330-002.json"
+
+                // "--csv_in=../../trainingdata-us/20210330-03/20210330173759.csv",
+                // "--json_in=../../trainingdata-us/20210330-03/20210330-003-",
+                // "--csv_us_out=./outputcsv/us-20210330-003.csv",
+                // "--csv_points_out=./outputcsv/points-20210330-003.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210330-003.json"
+
+                // "--csv_in=../../trainingdata-us/20210412/20210412175214-01.csv",
+                // "--json_in=../../trainingdata-us/20210412/20210412175214-001-",
+                // "--csv_us_out=./outputcsv/us-20210412-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210412-001.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210412-001.json"
+
+                // "--csv_in=../../trainingdata-us/20210412-02/20210412194031-01.csv",
+                // "--json_in=../../trainingdata-us/20210412-02/20210412194031-001-",
+                // "--csv_us_out=./outputcsv/us-20210412-02-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210412-02-001.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210412-02-001.json"
+
+                // "--csv_in=../../trainingdata-us/20210412-02/20210412202628-02.csv",
+                // "--json_in=../../trainingdata-us/20210412-02/20210412194031-001-",
+                // "--csv_us_out=./outputcsv/us-20210412-02-002.csv",
+                // "--csv_points_out=./outputcsv/points-20210412-02-002.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210412-02-002.json"
+
+                // "--csv_in=../../trainingdata-us/20210412-02/20210412202732-03.csv",
+                // "--json_in=../../trainingdata-us/20210412-02/20210412202732-001-",
+                // "--csv_us_out=./outputcsv/us-20210412-02-003.csv",
+                // "--csv_points_out=./outputcsv/points-20210412-02-003.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210412-02-003.json"
+
+                // "--csv_in=../../trainingdata-us/20210413/20210413152823-01.csv",
+                // "--json_in=../../trainingdata-us/20210413/20210413152823-001-",
+                // "--csv_us_out=./outputcsv/us-20210413-01-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210413-01-001.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210413-01-001.json"
+
+                // "--csv_in=../../trainingdata-us/20210413/20210413153045-02.csv",
+                // "--json_in=../../trainingdata-us/20210413/20210413152823-001-",
+                // "--csv_us_out=./outputcsv/us-20210413-01-002.csv",
+                // "--csv_points_out=./outputcsv/points-20210413-01-002.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210413-01-002.json"
+
+                // "--csv_in=../../trainingdata-us/20210413/20210413153231-03.csv",
+                // "--json_in=../../trainingdata-us/20210413/20210413152823-001-",
+                // "--csv_us_out=./outputcsv/us-20210413-01-003.csv",
+                // "--csv_points_out=./outputcsv/points-20210413-01-003.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/points-20210413-01-003.json"
+
+                // "--csv_in=../../trainingdata-us/20210413/2021041315341-04.csv",
+                // "--csv_in=../../CloudCompare/video_csv/2021041315341-04.csv",
+                // "--json_in=../../trainingdata-us/20210413/20210413152823-001-",
+                // "--csv_us_out=./outputcsv/us-20210413-01-004.csv",
+                // "--csv_points_out=./outputcsv/points-20210413-01-004.csv",
+                // "--needBorder=True",
+                // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210413-01-004.json"
+
+                // "--csv_in=./Data/test.csv",
+                // "--json_in=../../trainingdata-us/20210413/20210413152823-001-",
+                // "--csv_us_out=./outputcsv/test.csv",
+                // "--csv_points_out=./outputcsv/test.csv",
+                // "--needBorder=True",
+                // "--outJson=./outputJson/test.json"
+
+                // "--csv_in=../../trainingdata-us/20210501/test1-20210501185116.csv",
+                // "--json_in=../../trainingdata-us/20210501/test1-20210501185116 (2021-5-1 18-39-58)/test1-20210501185116 ",
+                // "--csv_us_out=./outputcsv/us-20210501-01-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210501-01-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210501-01-001.json"
+
+                // "--csv_in=../../trainingdata-us/test20210502/test3/test3-20210501190353.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test3/test3-20210501190353 (2021-5-1 18-39-59)/test3-20210501190353 ",
+                // "--csv_us_out=./outputcsv/us-20210502-03-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-03-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210502-03-001.json"
+
+                // "--csv_in=../../trainingdata-us/test20210502/test4/20210502120353.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test4/20210502120353 (2021-5-2 12-50-16)/20210502120353 ",
+                // "--csv_us_out=./outputcsv/us-20210502-04-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-04-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210502-04-001.json"
+
+                // "--csv_in=../../trainingdata-us/test20210502/test5/20210502122157.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test5/20210502122157 (2021-5-2 12-50-17)/20210502122157 ",
+                // "--csv_us_out=./outputcsv/us-20210502-05-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-05-001.csv",
+                // "--needBorder=True",print(score_str)
+                // "--csv_in=../../trainingdata-us/test20210502/test6/20210502125638.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test6/20210502125638 (2021-5-2 12-50-18)/20210502125638 ",
+                // "--csv_us_out=./outputcsv/us-20210502-06-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-06-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210502-06-001.json"
+
+                // "--csv_in=../../trainingdata-us/test20210502/test7/20210502125807.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test7/20210502125807 (2021-5-2 12-50-19)/20210502125807 ",
+                // "--csv_us_out=./outputcsv/us-20210502-07-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-07-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210502-07-001.json"
+
+                // "--csv_in=../../trainingdata-us/test20210502/test8/20210502131033.csv",
+                // "--json_in=../../trainingdata-us/test20210502/test8/20210502131033 (2021-5-2 12-50-19)/20210502131033 ",
+                // "--csv_us_out=./outputcsv/us-20210502-08-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-08-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=./outputJson/points-20210502-08-001.json"
+
+                // "--csv_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/1/track.csv",
+                // "--json_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/1/images/20210602124328-1-",
+                // "--csv_us_out=./outputcsv/us-20210502-08-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-08-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/腹部超声视频0602/华生线性超声/1/华生线性超声-1.json"
+
+                // "--csv_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/2/track.csv",
+                // "--json_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/2/images/20210602124924-1-",
+                // "--csv_us_out=./outputcsv/us-20210502-08-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-08-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/腹部超声视频0602/华生线性超声/2/华生线性超声-2.json"
+
+                // "--csv_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/3/track.csv",
+                // "--json_in=../../trainingdata-us/腹部超声视频0602/华生线性超声/3/images/20210602125026-1-",
+                // "--csv_us_out=./outputcsv/us-20210502-08-001.csv",
+                // "--csv_points_out=./outputcsv/points-20210502-08-001.csv",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/腹部超声视频0602/华生线性超声/3/华生线性超声-3.json"
+
+                // "--csv_in=../../trainingdata-us/TEST20210527/M形/M1/track.csv",
+                // "--json_in=../../trainingdata-us/TEST20210527/M形/M1/images/20210527200147-m1-",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/TEST20210527/M形/M1/m1.json"
+
+                // "--csv_in=../../trainingdata-us/TEST20210527/M形/M2/track.csv",
+                // "--json_in=../../trainingdata-us/TEST20210527/M形/M2/images/20210527200829-m2-",
+                // "--needBorder=True",
+                // "--sameFrames=../../trainingdata-us/TEST20210527/M形/M2/sameFrames.csv",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/TEST20210527/M形/M2/m2.json"
+
+                // "--csv_in=../../trainingdata-us/腹部超声视频0611/track.csv",
+                // "--json_in=../../trainingdata-us/腹部超声视频0611/images/20210611200341-1-",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outJson=../../trainingdata-us/腹部超声视频0611/20210611200341.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/forTest/20220115185506.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/forTest/json/images--",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/forTest/20220115185506.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/forTest/20220115185506.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/20220115185506.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/json/images--",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/20220115185506.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115185506/20220115185506.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185618/20220115185618.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185618/json/us-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115185618/20220115185618.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115185618/20220115185618.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185746/20220115185746.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185746/json/us-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115185746/20220115185746.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115185746/20220115185746.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185928/20220115185928.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115185928/json/us-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115185928/20220115185928.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115185928/20220115185928.json"
+
+                // "--csv_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/20220115190103.csv",
+                // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/json/images--",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/20220115190103.ply",
+                // "--outJson=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/20220115190103.json"
+
+                // "--csv_in=../../trainingdata-us/test/20220119103704.csv",
+                // // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/json/us-",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/test/20220119103704.ply",
+                // "--outJson=../../trainingdata-us/test/20220119103704.json"
+
+                // "--csv_in=../../trainingdata-us/test/20220119153900.csv",
+                // // "--json_in=../../trainingdata-us/20220115腹部模型_测试视频/20220115190103/json/us-",
+                // "--needBorder=True",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/test/20220119153900.ply",
+                // "--outJson=../../trainingdata-us/test/20220119153900.json"
+
+                // "--csv_in=../../trainingdata-us/29220122模型视频/18cm/20220122172632/20220122172632.csv",
+                // "--json_in=../../trainingdata-us/29220122模型视频/18cm/20220122172632/jsons/20220122172632-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/29220122模型视频/18cm/20220122172632/20220122172632.ply",
+                // "--outJson=../../trainingdata-us/29220122模型视频/18cm/20220122172632/20220122172632.json"
+
+                // "--csv_in=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215649/20220124215649.csv",
+                // "--json_in=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215649/jsons/20220124215649-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215649/20220124215649.ply",
+                // "--outJson=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215649/20220124215649.json"
+
+
+                // "--csv_in=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215740/20220124215740.csv",
+                // "--json_in=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215740/jsons/20220124215740-",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215740/20220124215740.ply",
+                // "--outJson=../../trainingdata-us/20220124标注模型及腹部体模视频/标准模型/20220124215740/20220124215740.json"
+
+                // "--csv_in=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220552/20220124220552.csv",
+                // "--json_in=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220552/jsons/images--",
+                // // "--needBorder=False",
+                // // "--needLogo=True",
+                // "--outPly=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220552/20220124220552.ply",
+                // "--outJson=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220552/20220124220552.json"
+
+                "--csv_in=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/20220124220645.csv",
+                "--json_in=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/jsons/images--",
+                "--needBorder=True",
+                // "--needLogo=True",
+                "--outPly=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/20220124220645.ply",
+                "--outJson=../../trainingdata-us/20220124标注模型及腹部体模视频/腹部体膜/20220124220645/20220124220645.json"
+            ]
+        },
+        {
+            "name": "iou_unet",
+            "type": "python",
+            "request": "launch",
+            "program": "iou-unet.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+                // "--perFile=False",
+                // "--pred=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/inference_out/",
+                // "--true=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV/multiple/",
+                // "--true=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV_augmentation/multiple/",
+                // "--pred=/media/yao/iot-hd/workspace/trainingdata-us/JJG/inference_out/",
+                // "--true=/media/yao/iot-hd/workspace/trainingdata-us/JJG/masks-CA-N-IJV/multiple/",
+                // // "--true=/media/yao/iot-hd/workspace/trainingdata-us/JJG/masks-CA-N-IJV_augmentation/multiple/",
+                // "--classNum=4"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/01.JJG-CK/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/01.JJG-CK/masks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/masks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/paddingInference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/paddingMasks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subInference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subMasks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/masks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/paddingInference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/paddingMasks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/fullScreenInference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/fullScreenMasks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/01.US-AI-DATA_JJG_lable/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/01.US-AI-DATA_JJG_lable/masks/multiple/",
+                // "--classNum=14"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/02.SGS/masks/multiple/",
+                // "--classNum=6"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/03.SGX/masks/multiple/",
+                // "--classNum=9"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/04.YLB/masks/multiple/",
+                // "--classNum=10"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/05.GSJ/masks/multiple/",
+                // "--classNum=7"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/subMasks/multiple/",
+                // "--classNum=8"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/06.GWZ/masks/multiple/",
+                // "--classNum=8"
+                // "--pred=/mnt/iot-hd/workspace/03.BeJingFukushima/06.GWZ/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/03.BeJingFukushima/06.GWZ/masks/multiple/",
+                // "--classNum=8"
+                // "--pred=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/01.Beijing/11.Ed-GWZ/masks/multiple/",
+                // "--classNum=8"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/masks/multiple/",
+                // "--classNum=9"
+                // "--pred=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/02.Fukushima/07.SJG/masks-FA-FV-N/multiple/",
+                // "--classNum=4"
+                // "--pred=/mnt/iot-hd/workspace/trainingdata-us-second/liver/patient90005/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/trainingdata-us-second/liver/patient90005/masks/multiple/",
+                // "--pred=/mnt/iot-hd/workspace/trainingdata-us-second/liver/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/trainingdata-us-second/liver/masks/multiple/",
+                // "--classNum=15"
+                // "--pred=/mnt/iot-hd/workspace/01.Beijing/03.XZP/inference_out/",
+                // "--true=/mnt/iot-hd/workspace/01.Beijing/03.XZP/masks/multiple/",
+                // "--classNum=4"
+                // "--pred=/home/yao/workspace/trainingdata-us/LiveModel/imagesAndjsons/inference_out/",
+                // "--true=/home/yao/workspace/trainingdata-us/LiveModel/imagesAndjsons/masks/multiple/",
+                // "--classNum=3"
+                // "--pred=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/inference_out/",
+                // "--true=/home/yao/workspace/trainingdata-us/JJG_Classify_20220222/葡萄状/masks/multiple/",
+                // "--classNum=6"
+                // "--pred=/home/yao/workspace/trainingdata-us/LiveModel/ALL/inference_out/",
+                // "--true=/home/yao/workspace/trainingdata-us/LiveModel/ALL/masks/multiple/",
+                // "--pred=/home/yao/workspace/trainingdata-us/训练数据集-人体/标记后数据/inference_out/",
+                // "--true=/home/yao/workspace/trainingdata-us/训练数据集-人体/标记后数据/masks/multiple/",
+                // "--classNum=3"
+                "--pred=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/inference_out/",
+                "--true=/media/yao/ボリューム/ubuntu/workspace/trainingdata-us/pigLive20220421/masks/multiple/",
+                "--classNum=2"
+            ]
+        },
+        {
+            "name": "borderRm",
+            "type": "python",
+            "request": "launch",
+            "program": "borderRm.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+            ]
+        },
+        {
+            "name": "rmBlackEdge",
+            "type": "python",
+            "request": "launch",
+            "program": "rmBlackEdge.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+            ]
+        },
+        {
+            "name": "dataAugmentation",
+            "type": "python",
+            "request": "launch",
+            "program": "dataAugmentation.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/images/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/images_augmentation/"
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/images/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/images_augmentation/"                
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV/multiple/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV_augmentation/multiple/",
+                "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV_512/multiple/",
+                "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV_512_augmentation/multiple/",
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/masks-CA-N-IJV/multiple/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/masks-CA-N-IJV_augmentation/multiple/",
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV-ASM-MSM-SCM/multiple/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/masks-CA-N-IJV-ASM-MSM-SCM_augmentation/multiple/",
+                "--isGray=True",
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/jsons/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/02_Fukushima/US-AI-DATA_JJG_lable/JJG/jsons_augmentation/",
+                // "--inPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/jsons/",
+                // "--outPath=/media/yao/iot-hd/workspace/trainingdata-us/JJG/jsons_augmentation/",
+                // "--isJson=True"
+            ]
+        },
+        {
+            "name": "equalize",
+            "type": "python",
+            "request": "launch",
+            "program": "equalize.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/imgEffect",
+            "args" :[
+            ]
+        },
+        {
+            "name": "clahe",
+            "type": "python",
+            "request": "launch",
+            "program": "clahe.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/imgEffect",
+            "args" :[
+            ]
+        },
+        {
+            "name": "showImg",
+            "type": "python",
+            "request": "launch",
+            "program": "showImg.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+            ]
+        },
+        {
+            "name": "glcm",
+            "type": "python",
+            "request": "launch",
+            "program": "glcm.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/GLCM",
+            "args" :[
+            ]
+        },
+        {
+            "name": "filter",
+            "type": "python",
+            "request": "launch",
+            "program": "filter.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/labelme",
+            "args" :[
+                "--SJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/originLabelJsons/",
+                "--DJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/FilterLabelJson/"
+            ]
+        },
+        {
+            "name": "readJsonJP",
+            "type": "python",
+            "request": "launch",
+            "program": "readJsonJP.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[
+                // "--SJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/originLabelJsons/",
+                // "--DJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/FilterLabelJson/"
+            ]
+        },
+        {
+            "name": "nii2png2dcm",
+            "type": "python",
+            "request": "launch",
+            "program": "nii2png2dcm.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/DICOM",
+            "args" :[
+                // "--SJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/originLabelJsons/",
+                // "--DJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/patient10001/FilterLabelJson/"
+            ]
+        },
+        {
+            "name": "paddingImage",
+            "type": "python",
+            "request": "launch",
+            "program": "paddingImage.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                // "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subImages/",
+                // "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/paddingImages/",
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/subJsons/",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.JJG/paddingJsons/",
+
+                "--inImgPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/images/",
+                "--outImgPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/paddingImages/",
+                "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/jsons/",
+                "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/paddingJsons/",
+                "--isLabelme=True"
+            ]
+        },
+        {
+            "name": "labelmeEditor",
+            "type": "python",
+            "request": "launch",
+            "program": "labelmeEditor.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                // "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.US-AI-DATA_JJG_lable/jsons",
+                // "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/01.US-AI-DATA_JJG_lable/jsons",
+                "--inJsonPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/jsons",
+                "--outJsonPath=/mnt/iot-hd/workspace/02.Fukushima/98.検証用/01.JJG/patient10001/fullScreenJsons",
+            ]
+        },
+        {
+            "name": "resize2",
+            "type": "python",
+            "request": "launch",
+            "program": "resize2.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                "--inImgPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images883/depth3.5/",
+                "--outImgPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images883To1024/depth3.5/",
+                "--inJsonPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images883/depth3.5/",
+                "--outJsonPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images883To1024/depth3.5/",
+            ]
+        },
+        {
+            "name": "partition",
+            "type": "python",
+            "request": "launch",
+            "program": "partition.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/mp42file",
+            "args" :[
+                "--sPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/images",
+                "--dPath=/mnt/iot-hd/workspace/01.Beijing/01.JJG/"
+            ]
+        },
+        {
+            "name": "Hausdorff_Distance",
+            "type": "python",
+            "request": "launch",
+            "program": "Hausdorff_Distance.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[]
+        },
+        {
+            "name": "matrixMul",
+            "type": "python",
+            "request": "launch",
+            "program": "matrixMul.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}/3DTrack",
+            "args" :[]
+        },
+        {
+            "name": "copyFile",
+            "type": "python",
+            "request": "launch",
+            "program": "copyFile.py",
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}",
+            "args" :[]
+        }
+
+    ]
+}

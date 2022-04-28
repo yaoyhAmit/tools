@@ -1,0 +1,12 @@
+/file2mp4/*.mp4
+tmp
+tmp1
+temp
+old_data.csv
+# /3DTrack/outputcsv/*
+# /3DTrack/outputJson/*
+# /3DTrack/Data/*
+/DICOM/dcm/*
+/DICOM/testImg.nii.gz
+/imgEffect/*.jpg
+/imgEffect/*.png
